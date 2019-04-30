@@ -1,11 +1,11 @@
 version: '3.5'
 services:
-  web:    
+  web:
     ports:
         - "8000:80"
   db:
     ports:
-        - "3306:3306"
+        - "3307:3306"
     volumes:
         - /var/www/db/petAdoption:/var/lib/mysql
     environment:
