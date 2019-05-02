@@ -15,6 +15,9 @@ class CreateSheltersTable extends Migration
     {
         Schema::create('shelters', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('description');
+            $table->integer('cnpj');
             $table->timestamps();
         });
     }

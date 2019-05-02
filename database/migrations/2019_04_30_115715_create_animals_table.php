@@ -15,6 +15,13 @@ class CreateAnimalsTable extends Migration
     {
         Schema::create('animals', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->integer('age');
+            $table->string('description');
+            $table->string('status');
+
+            $table->integer('shelter_id');
+            $table->foreign('shelter_id')->references('id')->on('shelters');
             $table->timestamps();
         });
     }

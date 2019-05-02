@@ -5,11 +5,11 @@ services:
         - "8000:80"
   db:
     ports:
-        - "3307:3306"
+        - "3306:3306"
     volumes:
         - /var/www/db/petAdoption:/var/lib/mysql
     environment:
-        MYSQL_ROOT_PASSWORD: p@ssw0rd
-        MYSQL_DATABASE: pet-adoption-database
-        MYSQL_USER: takashi
-        MYSQL_PASSWORD: 06041944
+        MYSQL_ROOT_PASSWORD: toor
+        MYSQL_DATABASE: pet-db
+        MYSQL_USER: p1nk
+        MYSQL_PASSWORD: root
