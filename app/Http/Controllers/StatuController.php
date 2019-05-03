@@ -2,28 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Services\AnimalService;
-use App\Http\Requests\AnimalRequest;
+use App\Services\StatuService;
+use App\Http\Requests\StatuRequest;
 
-class AnimalController extends Controller
+class StatuController extends Controller
 {
 
-    public function __construct(AnimalService $service)
+    public function __construct(StatuService $service)
     {
         $this->service = $service;
     }
 
-    public function store(AnimalRequest $request)
+    public function store(StatusRequest $request)
     {
+        dd($request);
         return response()->json([
             'message' => '',
             'data' => $this->service->create($request->all()),
         ], 200);
     }
 
-    public function update(AnimalRequest $request, $id)
+    public function update(StatusRequest $request, $id)
     {
+        dd($request);
         return response()->json([
             'message' => '',
             'data' => $this->service->update($request->all(), $id),

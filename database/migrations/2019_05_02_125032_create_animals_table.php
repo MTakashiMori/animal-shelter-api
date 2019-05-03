@@ -16,7 +16,6 @@ class CreateAnimalsTable extends Migration
             $table->string('name');
             $table->integer('age');
             $table->string('description');
-            $table->string('status');
 
             $table->unsignedBigInteger('status_id');
             $table->foreign('status_id')->references('id')->on('status');
@@ -24,8 +23,8 @@ class CreateAnimalsTable extends Migration
             $table->unsignedBigInteger('types_id');
             $table->foreign('types_id')->references('id')->on('types');
 
-            $table->unsignedBigInteger('shelter_id');
-            $table->foreign('shelter_id')->references('id')->on('shelters');
+            $table->unsignedBigInteger('shelters_id');
+            $table->foreign('shelters_id')->references('id')->on('shelters');
             $table->timestamps();
         });
     }

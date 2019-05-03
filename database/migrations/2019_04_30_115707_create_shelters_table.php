@@ -17,7 +17,7 @@ class CreateSheltersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('description');
-            $table->integer('cnpj');
+            $table->bigInteger('cnpj');
             $table->timestamps();
         });
     }

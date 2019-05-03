@@ -21,6 +21,7 @@ Route::get('teste', function () {
 });
 Route::group(['prefix' => 'v1'], function () {
     Route::resource('shelter', 'ShelterController');
-
     Route::resource('animal', 'AnimalController');
+    Route::resource('type', 'TypeController');
+    Route::resource('status', 'StatuController');
 });

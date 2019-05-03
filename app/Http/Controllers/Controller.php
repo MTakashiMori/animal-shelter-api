@@ -6,6 +6,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Http\Request;
 
 class Controller extends BaseController
 {
@@ -21,16 +22,17 @@ class Controller extends BaseController
         ], 200);
     }
 
-    public function show(Request $request)
+    public function show($id)
     {
         return response()->json([
             'message' => '',
-            'data' => $this->service->all($request->all()),
+            'data' => $this->service->find($id),
         ], 200);
     }
 
     public function destroy($id)
     {
+        $this->service->destroy($id);
         return response()->json([
             'message' => '',
         ], 200);

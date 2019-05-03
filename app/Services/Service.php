@@ -6,23 +6,28 @@ abstract class Service
 {
     protected $repository;
 
-    public function all()
+    public function all($request)
     {
+        return $this->repository->all();
     }
 
-    public function find()
+    public function find($id)
     {
+        return $this->repository->find($id);
     }
 
-    public function create()
+    public function create($request)
     {
+        return $this->repository->create($request);
     }
 
-    public function update()
+    public function update($request, $id)
     {
+        return $this->repository->update($request, $id);
     }
 
-    public function destroy()
+    public function destroy($id)
     {
+        return $this->repository->delete($id);
     }
 }

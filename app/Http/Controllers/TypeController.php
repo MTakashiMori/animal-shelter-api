@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Services\AnimalService;
-use App\Http\Requests\AnimalRequest;
+use App\Services\TypeService;
+use App\Http\Requests\TypeRequest;
 
-class AnimalController extends Controller
+class TypeController extends Controller
 {
 
-    public function __construct(AnimalService $service)
+    public function __construct(TypeService $service)
     {
         $this->service = $service;
     }
 
-    public function store(AnimalRequest $request)
+    public function store(TypeRequest $request)
     {
         return response()->json([
             'message' => '',
@@ -22,11 +21,12 @@ class AnimalController extends Controller
         ], 200);
     }
 
-    public function update(AnimalRequest $request, $id)
+    public function update(TypeRequest $request, $id)
     {
         return response()->json([
             'message' => '',
             'data' => $this->service->update($request->all(), $id),
         ], 200);
     }
+
 }
