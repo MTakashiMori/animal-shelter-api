@@ -8,7 +8,7 @@ abstract class Service
 
     public function all($request)
     {
-        return $this->repository->all();
+        return $this->repository->all($request);
     }
 
     public function find($id)

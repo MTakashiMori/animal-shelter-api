@@ -22,7 +22,7 @@ class AnimalController extends Controller
         ], 200);
     }
 
-    public function update(AnimalRequest $request, $id)
+    public function update(Request $request, $id)
     {
         return response()->json([
             'message' => '',

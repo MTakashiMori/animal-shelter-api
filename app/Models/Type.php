@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Animal;
 
 class Type extends Model
 {
@@ -10,6 +11,6 @@ class Type extends Model
 
     public function animal()
     {
-        return $this->HasMany(Animal::class);
+        return $this->HasMany(Animal::class, 'types_id');
     }
 }

@@ -4,17 +4,24 @@ namespace App\Repositories;
 
 abstract class Repository
 {
-
+    protected $relationship;
     protected $model;
 
-    public function all()
+    public function all($request)
     {
-        return $this->model->all();
+        if($request)
+        {
+            return $this->model
+                ->where($request)
+                ->with($this->relationship)
+                ->get();
+        }
+        return $this->model->with($this->relationship)->get();
     }
 
     public function find($id)
     {
-        return $this->model->find($id);
+        return $this->model->with($this->relationship)->find($id);
     }
 
     public function create($data)

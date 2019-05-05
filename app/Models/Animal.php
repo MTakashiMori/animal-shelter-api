@@ -3,6 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Shelter;
+use App\Models\Statu;
+use App\Models\Type;
 
 class Animal extends Model
 {
@@ -10,16 +13,16 @@ class Animal extends Model
 
     public function shelter()
     {
-        return $this->belongsTo(Shelter::class);
+        return $this->belongsTo(Shelter::class, 'shelters_id');
     }
 
     public function status()
     {
-        return $this->belongsTo(Statu::class);
+        return $this->belongsTo(Statu::class, 'status_id');
     }
 
     public function type()
     {
-        return $this->belongsTo(Type::class);
+        return $this->belongsTo(Type::class, 'types_id');
     }
 }

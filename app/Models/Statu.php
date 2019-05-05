@@ -11,6 +11,6 @@ class Statu extends Model
 
     public function animal()
     {
-        return $this->HasMany(Animal::class);
+        return $this->HasMany(Animal::class, 'status_id');
     }
 }

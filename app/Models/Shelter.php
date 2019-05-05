@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Animal;
 
 class Shelter extends Model
 {
@@ -10,6 +11,6 @@ class Shelter extends Model
 
     public function animal()
     {
-        return $this->hasMany(Animal::class);
+        return $this->hasMany(Animal::class, 'shelters_id');
     }
 }
