@@ -16,12 +16,13 @@ use Illuminate\Http\Request;
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::get('teste', function () {
-    dd('teste');
-});
 Route::group(['prefix' => 'v1'], function () {
     Route::resource('shelter', 'ShelterController');
     Route::resource('animal', 'AnimalController');
     Route::resource('type', 'TypeController');
     Route::resource('status', 'StatuController');
+
+    Route::get('test', function () {
+        return "Api Working - 200";
+    });
 });
