@@ -24,7 +24,7 @@ requirements
 
 3°-> cp .env.example to .env
 
-4°-> in .env, alter the <stong>DB_HOST</strong> value to your ip local (DB_HOST=192.168.1.10)
+4°-> in .env, alter the <stong>DB_HOST</strong> value to your ip local ( ex. DB_HOST=192.168.1.10)
 
 5°-> set root access (chmod 777) on database volume, if you did not change anything, the database volume must be <strong>/var/www/html/db/shelter</strong>
 
