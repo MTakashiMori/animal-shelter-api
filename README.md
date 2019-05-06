@@ -1,4 +1,19 @@
-# animal-shelter-api
+# Animal Shelter
+
+This is a project for a animal shelter, you can add a shelter, add animals to her and adopt his animals.
+
+# Introduction
+
+this is a simple project using laravel and docker. This is the api for the front-end <a href="https://github.com/MTakashiMori/animal-shelter">front-end</a>
+
+# Install
+
+requirements
+<ul>
+    <li>Linux</li>
+    <li>Docker</li>
+    <li>Docker-compose</li>
+</ul>    
 
 <strong>For all cases, try give root acess to folders</strong><br>
 <strong>And for a easyless install, do not change anything in docker</strong>
