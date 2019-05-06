@@ -20,7 +20,10 @@ this is a simple project using laravel and docker. This is the api for the front
 <br>
 1° -> Clone this repository
 
-2° -> Inside folder execute docker-compose up (wait until laravel server is up )
+2° -> Inside folder execute (wait until laravel server is up )
+```
+docker-compose up 
+```
 
 3° -> Copy .env.example to .env
 
@@ -28,6 +31,11 @@ this is a simple project using laravel and docker. This is the api for the front
 
 5° -> Set root access (chmod 777) on database volume, if you did not change anything, the database volume must be <strong>/var/www/html/db/shelter</strong>
 
-6° -> Execute on db container,if you did not change anything, the command must be <strong>docker exec -it pet-adoption-api php artisan migrate:refresh --seed</strong>
-
-7° -> Access <a>localhost:8000/api/v1/test</a> to a test
+6° -> Execute on db container,if you did not change anything, the command must be 
+```
+docker exec -it pet-adoption-api php artisan migrate:refresh --seed
+```
+7° -> Access to a test
+```
+localhost:8000/api/v1/test
+```
