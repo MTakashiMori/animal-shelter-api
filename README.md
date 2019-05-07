@@ -4,7 +4,7 @@ This is a project for a animal shelter, you can add a shelter, add animals to he
 
 # Introduction
 
-this is a simple project using laravel and docker. This is the api for the front-end <a href="https://github.com/MTakashiMori/animal-shelter">front-end</a>
+this is a simple project using laravel and docker. This is the api for the <a href="https://github.com/MTakashiMori/animal-shelter">front-end</a>
 
 # Install
 
