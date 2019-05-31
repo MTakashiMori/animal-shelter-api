@@ -20,20 +20,39 @@ this is a simple project using laravel and docker. This is the api for the <a hr
 <br>
 1° -> Clone this repository
 
-2° -> Inside folder execute (wait until laravel server is up )
+2° -> Copy file 
+
+```
+docker-compose.everride.yml.example
+```
+to 
+```
+docker-compose.everride.yml
+```
+
+3° -> Change the values inside "<>" to your custom
+```
+custom values if you want
+<PORT_API> => 8000
+<PORT_ROOT> => 3306
+<YOUR_PATH> => your custom path
+<USER> => user
+<PASSWORD> => password
+```
+4° -> copy 
+```
+.env.example
+```
+to
+```
+.env
+```
+
+5° -> In .env, alter the <stong>DB_HOST</strong> value to your ip local ( ex. DB_HOST=192.168.1.10)
+
+6° -> Inside folder execute (wait until laravel server is up )
 ```
 docker-compose up 
-```
-
-3° -> Copy .env.example to .env
-
-4° -> In .env, alter the <stong>DB_HOST</strong> value to your ip local ( ex. DB_HOST=192.168.1.10)
-
-5° -> Set root access (chmod 777) on database volume, if you did not change anything, the database volume must be <strong>/var/www/html/db/shelter</strong>
-
-6° -> Execute on db container,if you did not change anything, the command must be 
-```
-docker exec -it pet-adoption-api php artisan migrate:refresh --seed
 ```
 7° -> Access to a test
 ```
